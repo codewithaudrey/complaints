@@ -1,0 +1,81 @@
+$breakpoints: (
+    xs: $xs-screen,
+    sm: $sm-screen, 
+    md: $md-screen,
+    lg: $lg-screen, 
+    xl: $xl-screen
+);
+
+@mixin respond-to($key) {
+    $breakpoint: map-get($breakpoints,  $key);
+    @if($breakpoint != null) {
+        @if $key == 'xs' {
+            @content;
+        }@else{
+            @media (min-width: $breakpoint) {
+                @content;
+            }
+        }
+    }@else {
+        @warn "Unknown breakpoint";
+    }
+};
+
+@mixin generate_classes($properties) {    
+    $class: map-get($properties, "class");
+    $values: map-get($properties, "values");
+    $property: map-get($properties, "property");
+    $responsive: map-get($properties, "responsive");
+    $pseudos: if(map-has-key($properties, "pseudos"), map-get($properties, "pseudos"), null);
+
+    $breakpoints : ();
+
+    @if($responsive == true) {
+        $breakpoints: map-merge($breakpoints, ((
+            xs: $xs-screen,
+            sm: $sm-screen, 
+            md: $md-screen,
+            lg: $lg-screen, 
+            xl: $xl-screen
+        )));
+    } @else {
+        $breakpoints: map-merge($breakpoints, ((
+            xs: $xs-screen,
+        )));
+    }
+
+
+    @each $breakpoint, $_ in $breakpoints {
+        @include respond-to($breakpoint) {
+            $bp: if($breakpoint == 'xs', '', #{$breakpoint}\:);
+
+            @each $value, $map in $values {
+                .#{$bp}#{$class}-#{$value} {
+                    @if (type-of($map) == 'map'){ 
+                        @each $prop, $prop-value in $map {
+                            #{$prop}: #{$prop-value};
+                        }
+                    }@else{
+                        #{$property}: #{$value};
+                    }
+                }
+
+                @if($pseudos != null) {
+                    @each $pseudo, $pseudo-value in $pseudos {
+                        .#{$pseudo}\:#{$bp}#{$class}-#{$value} {
+                            &#{$pseudo-value} {
+                                @if (type-of($map) == 'map'){ 
+                                    @each $prop, $prop-value in $map {
+                                        #{$prop}: #{$prop-value};
+                                    }
+                                }@else{
+                                    #{$property}: #{$value};
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

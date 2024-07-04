@@ -1,0 +1,53 @@
+$colors: (
+    white: var(--white), 
+    black: var(--black),  
+    // red: $red,
+    // yellow: var(--yellow-color),
+    // blue: var(--blue-color),
+    // orange: var(--orange-color),
+);
+
+
+$shades: color-shades($colors);
+
+$color: (
+    class: text,
+    property: color,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+        placeholder: ':placeholder',
+    ),
+    values: $shades,
+);
+
+@include generate_classes($color);
+
+$background-color: (
+    class: bg,
+    property: background-color,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+        placeholder: ':placeholder',
+    ),
+    values: $shades,
+);
+
+@include generate_classes($background-color);
+
+$border-color: (
+    class: border,
+    property: border-color,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+        placeholder: ':placeholder',
+    ),
+    values: $shades,
+);
+
+@include generate_classes($border-color);

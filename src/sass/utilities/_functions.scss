@@ -1,0 +1,21 @@
+@function color-shades($colors) {
+    $i: 1;
+    $result: ();
+    @each $key, $color in $colors {
+        @if index((current, inherit, transparent, black, white), $key) {
+            $result: map-merge($result, (#{$key}: $color));
+        }@else {
+            @while $i <=  11 {
+                $lightness: if($i != 6, ($i - 6) * 8.8%, 0%);
+                $adjustment: adjust-color($color, $lightness: $lightness);
+                
+                $append: if($i < 10, $i * 10, if($i == 10, 95, 100));
+                $result: map-merge($result, (#{$key}-#{$append}: $adjustment));
+
+                $i: $i + 1;
+            }
+        }
+    }
+
+    @return $result;
+}
