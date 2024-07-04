@@ -1,0 +1,194 @@
+:root {
+  --xs-screen: 0rem;
+  --sm-screen: 64rem;
+  --md-screen: 80rem;
+  --lg-screen: 120rem;
+  --xl-screen: 150rem;
+  --xs-container: ;
+  --sm-container: ;
+  --md-container: ;
+  --lg-container: ;
+  --xl-container: ;
+  --white: white;
+  --black: black;
+  --current: currentColor;
+  --transparent: transparent;
+  --inherit: inherit;
+  --red: #e21010;
+  --blue: #1212e7;
+  --green: #10e421;
+  --yellow: #dada11;
+  --orange: #e9910d;
+  --default-font-size: 62.5%;
+  --default-font-family: Inter;
+  --default-spacing-value: 1rem;
+  --default-size-value: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+html {
+  font-size: var(--default-font-size);
+  font-family: var(--default-font-family), sans-serif;
+  font-kerning: normal;
+  font-smooth: always;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+.text-white {
+  color: white;
+}
+
+.hover\:text-white:hover {
+  color: white;
+}
+
+.focus\:text-white:focus {
+  color: white;
+}
+
+.active\:text-white:active {
+  color: white;
+}
+
+.placeholder\:text-white:placeholder {
+  color: white;
+}
+
+.text-black {
+  color: black;
+}
+
+.hover\:text-black:hover {
+  color: black;
+}
+
+.focus\:text-black:focus {
+  color: black;
+}
+
+.active\:text-black:active {
+  color: black;
+}
+
+.placeholder\:text-black:placeholder {
+  color: black;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.hover\:bg-white:hover {
+  background-color: white;
+}
+
+.focus\:bg-white:focus {
+  background-color: white;
+}
+
+.active\:bg-white:active {
+  background-color: white;
+}
+
+.placeholder\:bg-white:placeholder {
+  background-color: white;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.hover\:bg-black:hover {
+  background-color: black;
+}
+
+.focus\:bg-black:focus {
+  background-color: black;
+}
+
+.active\:bg-black:active {
+  background-color: black;
+}
+
+.placeholder\:bg-black:placeholder {
+  background-color: black;
+}
+
+.border-white {
+  border-color: white;
+}
+
+.hover\:border-white:hover {
+  border-color: white;
+}
+
+.focus\:border-white:focus {
+  border-color: white;
+}
+
+.active\:border-white:active {
+  border-color: white;
+}
+
+.placeholder\:border-white:placeholder {
+  border-color: white;
+}
+
+.border-black {
+  border-color: black;
+}
+
+.hover\:border-black:hover {
+  border-color: black;
+}
+
+.focus\:border-black:focus {
+  border-color: black;
+}
+
+.active\:border-black:active {
+  border-color: black;
+}
+
+.placeholder\:border-black:placeholder {
+  border-color: black;
+}
+
+/*# sourceMappingURL=main.css.map */
