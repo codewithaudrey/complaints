@@ -1,37 +1,31 @@
-:root {
-    --xs-screen: 0rem;
-    --sm-screen: 64rem;
-    --md-screen: 80rem;
-    --lg-screen: 120rem;
-    --xl-screen: 150rem;
+$variables: (
+    xs-container: 0rem,
+    sm-container: 0rem ,
+    md-container: 0rem,
+    lg-container: 0rem,
+    xl-container: 0rem,
 
-    --xs-container: ;
-    --sm-container: ;
-    --md-container: ;
-    --lg-container: ;
-    --xl-container: ;
+    ring-color: #434343,
 
-    --white: white;
-    --black: black;
-    --current: currentColor;
-    --transparent: transparent;
-    --inherit: inherit;
-    --red: #e21010;
-    --blue: #1212e7;
-    --green: #10e421;
-    --yellow: #dada11;
-    --orange: #e9910d;
+    border-width: 1px,
 
-    --default-font-size: 62.5%;
-    --default-font-family: Inter;
+    white: white,
+    black: black,
+    current: currentColor,
+    transparent: transparent,
+    inherit: inherit,
+    red: #e21010,
+    blue: #1212e7,
+    green: #10e421,
+    yellow: #dada11,
+    orange: #e9910d,
 
-    --default-spacing-value: 1rem;
-    --default-size-value: 1rem;
-}
+    space: 0.8rem,
 
-$xs-screen: var(--xs-screen);
-$sm-screen: var(--sm-screen);
-$md-screen: var(--md-screen);
-$lg-screen: var(--lg-screen);
-$xl-screen: var(--xl-screen);
+    default-font-size: 62.5%,
+    default-font-family: Inter,
+
+    default-spacing-value: 1rem,
+    default-size-value: 1rem,
+);
 

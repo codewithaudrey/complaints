@@ -1,0 +1,18 @@
+@include generate_classes((
+    class: cursor,
+    property: cursor,
+    values: (auto, default, pointer, wait, text, progress, move, help, not-allowed, alias, copy),
+));
+
+@include generate_classes((
+    class: pointer,
+    property: pointer-events,
+    values: (auto, none)
+));
+
+
+@include generate_classes((
+    class: resize,
+    property: resize,
+    values: (none, vertical, horizontal, both)
+));

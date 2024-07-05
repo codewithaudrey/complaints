@@ -1,0 +1,77 @@
+$self: (auto, start, center, end, baseline);
+$items: (start, end, center, baseline, stretch);
+$content: (
+    normal: normal,
+    start: start,
+    end: end,
+    center: center,
+    justify: justify,
+    between: space-between,
+    around: space-around,
+    evenly: space-evenly,
+    baseline: baseline,
+   stretch: stretch,
+);
+
+@include generate_classes((
+    class: justify-content,
+    property: justify-content,
+    responsive: true,
+    values: $content,
+));
+
+@include generate_classes((
+    class: justify-items,
+    property: justify-items,
+    responsive: true,
+    values: $items,
+));
+
+@include generate_classes((
+    class: justify-self,
+    property: justify-self,
+    responsive: true,
+    values: $self,
+));
+
+@include generate_classes((
+    class: content,
+    property: align-content,
+    responsive: true,
+    values: $content,
+));
+
+@include generate_classes((
+    class: items,
+    property: align-items,
+    responsive: true,
+    values: $items,
+));
+
+@include generate_classes((
+    class: self,
+    property: align-self,
+    responsive: true,
+    values: $self,
+));
+
+@include generate_classes((
+    class: place-content,
+    property: place-content,
+    responsive: true,
+    values: $content,
+));
+
+@include generate_classes((
+    class: places-items,
+    property: places-items,
+    responsive: true,
+    values: $items,
+));
+
+@include generate_classes((
+    class: places-self,
+    property: places-self,
+    responsive: true,
+    values: $self,
+));

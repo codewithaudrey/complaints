@@ -1,0 +1,139 @@
+@include generate_classes((
+    class: scale,
+    property: transform,
+    responsive: true,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+    ),
+    values: (
+        0: scale(0),
+        25: scale(.25),
+        50: scale(.50),
+        75: scale(.75),
+        80: scale(.80),
+        90: scale(.90),
+        95: scale(.95),
+        100: scale(1.0),
+        125: scale(1.25),
+        150: scale(1.50),
+    ),
+));
+
+@include generate_classes((
+    class: rotate,
+    property: transform,
+    responsive: true,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+    ),
+    values: (
+        0: rotate(0deg),
+        2: rotate(2deg),
+        4: rotate(4deg),
+        8: rotate(8deg),
+        45: rotate(45deg),
+        90: rotate(90deg),
+        180: rotate(180deg),
+    ),
+));
+
+@include generate_classes((
+    class: translate-x,
+    property: transform,
+    responsive: true,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+    ),
+    values: (
+        0: translateX(0rem),
+        2: translateX(0.2rem),
+        4: translateX(0.4rem),
+        8: translateX(0.8rem),
+        10: translateX(1rem),
+        12: translateX(1.2rem),
+        16: translateX(1.6rem),
+    ),
+));
+
+@include generate_classes((
+    class: translate-y,
+    property: transform,
+    responsive: true,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+    ),
+    values: (
+        0: translateY(0rem),
+        2: translateY(0.2rem),
+        4: translateY(0.4rem),
+        8: translateY(0.8rem),
+        10: translateY(1rem),
+        12: translateY(1.2rem),
+        16: translateY(1.6rem),
+    ),
+));
+
+@include generate_classes((
+    class: skew-x,
+    property: transform,
+    responsive: true,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+    ),
+    values: (
+        0: skewX(0deg),
+        2: skewX(2deg),
+        4: skewX(4deg),
+        8: skewX(8deg),
+        45: skewX(45deg),
+        90: skewX(90deg),
+        180: skewX(180deg),
+    ),
+));
+
+@include generate_classes((
+    class: skew-y,
+    property: transform,
+    responsive: true,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+    ),
+    values: (
+        0: skewY(0deg),
+        2: skewY(2deg),
+        4: skewY(4deg),
+        8: skewY(8deg),
+        45: skewY(45deg),
+        90: skewY(90deg),
+        180: skewY(180deg),
+    ),
+));
+
+@include generate_classes((
+    class: origin,
+    property: transform-origin,
+    responsive: true,
+    values: (
+        left: left,
+        right: right,
+        center: center,
+        top: top,
+        top-right: top right,
+        top-left: top left,
+        bottom: bottom,
+        bottom-left: bottom left,
+        bottom-right: bottom right,
+    ),
+));

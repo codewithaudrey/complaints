@@ -36,6 +36,10 @@
     font-style: normal;
 }
 
+:root {
+    @include set-variables($variables);
+}
+
 html {
     font-size: var(--default-font-size);
     font-family: var(--default-font-family), sans-serif;

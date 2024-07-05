@@ -1,0 +1,128 @@
+$sizes: (
+    12: (
+        font-size: 1.2rem,
+        line-height: 1.5,
+    ),
+    13: (
+        font-size: 1.3rem,
+        line-height: 1.5,
+    ),
+    14: (
+        font-size: 1.4rem,
+        line-height: 1.5,
+    ),
+    16: (
+        font-size: 1.6rem,
+        line-height: 1.5,
+    ),
+    18: (
+        font-size: 1.8rem,
+        line-height: 1.5,
+    ),
+    20: (
+        font-size: 2.0rem,
+        line-height: 1.5,
+    ),
+    24: (
+        font-size: 2.4rem,
+        line-height: 1.5,
+    ),
+    32: (
+        font-size: 3.2rem,
+        line-height: 1.5,
+    ),
+    40: (
+        font-size: 4.0rem,
+        line-height: 1.5,
+    ),
+    48: (
+        font-size: 4.8rem,
+        line-height: 1.5,
+    ),
+    56: (
+        font-size: 5.6rem,
+        line-height: 1.5,
+    ),
+    64: (
+        font-size: 6.4rem,
+        line-height: 1.5,
+    ),
+    80: (
+        font-size: 8.0rem,
+        line-height: 1.5,
+    ),
+);
+
+$font-size: (
+    class: text,
+    property: font-size,
+    responsive: true,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+        placeholder: '::placeholder',
+    ),
+    values: $sizes
+);
+
+@include generate_classes($font-size);
+
+$font-weight: (
+    class: weight,
+    property: font-weight,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+        placeholder: '::placeholder',
+    ),
+    values: (400, 500, 600, 700)
+);
+
+@include generate_classes($font-weight);
+
+$text-align: (
+    class: text,
+    property: text-align,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+        placeholder: '::placeholder',
+    ),
+    values: (start, end, center, left, right, justify)
+);
+
+@include generate_classes($text-align);
+
+
+$text-transform: (
+    class: null,
+    property: text-transform,
+    pseudos: (
+        hover: ':hover',
+        focus: ':focus',
+        active: ':active',
+        placeholder: '::placeholder',
+    ),
+    values: (capitalize, uppercase, lowercase)
+); 
+
+@include generate_classes($text-transform);
+
+$text-decoration: (
+    class: decoration,
+    property: text-decoration,
+    values: (none, inherit),
+);
+
+@include generate_classes($text-decoration);
+
+$list-style-type: (
+    class: 'list-style',
+    property: list-style-type,
+    values: (none, disc, numbers, dotted, circle),
+);
+
+@include generate_classes($list-style-type);

@@ -1,0 +1,46 @@
+@include generate_classes((
+    class: aspect-ratio,
+    property: aspect-ratio,
+    responsive: true,
+    values: (
+        auto: auto,
+        1\/1: 1/1,
+        4\/3: 4/3,
+        16\/9: 16/9,
+        9\/16: 9/16,
+    ),
+));
+
+@include generate_classes((
+    class: display,
+    property: display,
+    responsive: true,
+    values: (
+        block,
+        inline,
+        inline-block,
+        table,
+        flex, inline-flex, list-item, none, grid, inline-grid,
+    ),
+));
+
+
+@include generate_classes((
+    class: object,
+    property: object-fit,
+    values: (fill, contain, cover, scale-down, none),
+));
+
+
+@include generate_classes((
+    class: position, 
+    property: position,
+    responsive: true,
+    values: (static, sticky, relative, absolute, fixed),
+));
+
+@include generate_classes((
+    class: visibility,
+    property:  visibility,
+    values: (visible, hidden, collapse),
+));

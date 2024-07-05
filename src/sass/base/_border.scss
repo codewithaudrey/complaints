@@ -1,0 +1,76 @@
+$width: (
+    none: calc(0 / var(--border-width)),
+    1: var(--border-width),
+    2: calc(var(--border-width) * 2),
+    4: calc(var(--border-width) * 4),
+    8: calc(var(--border-width) * 8),
+);
+
+$border: (
+    class: border,
+    property: border-width,
+    responsive: true,
+    values: $width,
+);
+
+$border-top: (
+    class: border,
+    property: border-top-width,
+    responsive: true,
+    values: $width,
+);
+
+$border-bottom: (
+    class: border,
+    property: border-bottom-width,
+    responsive: true,
+    values: $width,
+);
+
+$border-left: (
+    class: border,
+    property: border-left-width,
+    responsive: true,
+    values: $width,
+);
+
+$border-right: (
+    class: border-t,
+    property: border-right-width,
+    responsive: true,
+    values: $width,
+);
+
+@include generate_classes($border);
+@include generate_classes($border-top);
+@include generate_classes($border-bottom);
+@include generate_classes($border-left);
+@include generate_classes($border-right);
+
+$divide-x: (
+    class: divide-x,
+    append: ':not(:last-child)',
+    property: border-right-width,
+    values: $width,
+);
+
+@include generate_classes($divide-x);
+
+$divide-y: (
+    class: divide-y,
+    append: ':not(:last-child)',
+    property: border-top-width,
+    values: $width,
+);
+
+@include generate_classes($divide-y);
+
+$style: (
+    class: border,
+    property: border-style,
+    values: (none, solid, dotted, dashed, double),
+);
+
+@include generate_classes($style);
+
+
