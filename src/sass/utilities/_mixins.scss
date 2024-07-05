@@ -1,9 +1,15 @@
+@mixin set-variables ($map) {
+    @each $key, $value in $map {
+        --#{$key}: #{$value};
+    }
+}
+
+
 $breakpoints: (
-    xs: $xs-screen,
-    sm: $sm-screen, 
-    md: $md-screen,
-    lg: $lg-screen, 
-    xl: $xl-screen
+    xs: 0rem,
+    sm: 40rem, 
+    md: 64rem,
+    lg: 75rem, 
 );
 
 @mixin respond-to($key) {
@@ -12,7 +18,7 @@ $breakpoints: (
         @if $key == 'xs' {
             @content;
         }@else{
-            @media (min-width: $breakpoint) {
+            @media screen and (min-width: $breakpoint) {
                 @content;
             }
         }
@@ -26,23 +32,26 @@ $breakpoints: (
     $values: map-get($properties, "values");
     $property: map-get($properties, "property");
     $responsive: map-get($properties, "responsive");
+    $append: map-get($properties, "append");
     $pseudos: if(map-has-key($properties, "pseudos"), map-get($properties, "pseudos"), null);
 
     $breakpoints : ();
 
     @if($responsive == true) {
         $breakpoints: map-merge($breakpoints, ((
-            xs: $xs-screen,
-            sm: $sm-screen, 
-            md: $md-screen,
-            lg: $lg-screen, 
-            xl: $xl-screen
+            xs: 0rem,
+            sm: 40rem, 
+            md: 64rem,
+            lg: 75rem, 
         )));
     } @else {
         $breakpoints: map-merge($breakpoints, ((
-            xs: $xs-screen,
+            xs: 0rem,
         )));
     }
+
+    $cs: if($class != null, #{$class}-, '');
+    $ap: if($append != null, #{$append} ,'');
 
 
     @each $breakpoint, $_ in $breakpoints {
@@ -50,26 +59,26 @@ $breakpoints: (
             $bp: if($breakpoint == 'xs', '', #{$breakpoint}\:);
 
             @each $value, $map in $values {
-                .#{$bp}#{$class}-#{$value} {
+                .#{$bp}#{$cs}#{$value}#{$ap} {
                     @if (type-of($map) == 'map'){ 
                         @each $prop, $prop-value in $map {
                             #{$prop}: #{$prop-value};
                         }
                     }@else{
-                        #{$property}: #{$value};
+                        #{$property}: #{$map};
                     }
                 }
 
                 @if($pseudos != null) {
                     @each $pseudo, $pseudo-value in $pseudos {
-                        .#{$pseudo}\:#{$bp}#{$class}-#{$value} {
+                        .#{$pseudo}\:#{$bp}#{$cs}#{$value}#{$ap} {
                             &#{$pseudo-value} {
                                 @if (type-of($map) == 'map'){ 
                                     @each $prop, $prop-value in $map {
                                         #{$prop}: #{$prop-value};
                                     }
                                 }@else{
-                                    #{$property}: #{$value};
+                                    #{$property}: #{$map};
                                 }
                             }
                         }
