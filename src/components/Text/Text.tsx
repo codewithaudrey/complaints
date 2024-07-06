@@ -19,6 +19,7 @@ const Text = React.forwardRef((props: Text.Props, ref: Text.Ref) => {
   const {
     as,
     size,
+    align,
     weight,
     transform,
     listStyle,
@@ -33,6 +34,7 @@ const Text = React.forwardRef((props: Text.Props, ref: Text.Ref) => {
       ref={ref}
       className={textVariants({
         size,
+        align,
         weight,
         transform,
         listStyle,

@@ -5,6 +5,7 @@ const textVariants = cv({
   variants: {
     size: typography.size,
     weight: typography.weight,
+    align: typography.align,
     transform: typography.transform,
     listStyle: typography.listStyle,
   },
