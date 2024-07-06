@@ -26,7 +26,7 @@ const typography = {
     values: ['none', 'inherit'] as const,
   },
   listStyle: {
-    prefix: 'list-style',
+    prefix: 'list',
     values: ['none', 'disc', 'circle', 'dotted', 'numbers'] as const,
   },
 } satisfies VariantMap;
