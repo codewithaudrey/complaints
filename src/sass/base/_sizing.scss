@@ -1,84 +1,131 @@
 $size: (
-    auto: auto,
-    fit: fit-content,
-    full: 100%,
-    0: 0px,
-    1: 1px,
-    2:2px,
-    4: 4px,
-    8: 8px,
-    12: 12px,
-    16: 16px,
-    20: 20px,
-    24: 24px,
-    32: 32px,
-    40: 40px,
-    48: 48px,
-    56: 56px,
-    64: 64px,
-    80: 80px,
-    128: 128px,
-    256: 256px,
-    320: 320px,
-    400: 400px,
-    480: 480px,
-    560: 560px,
-    640: 640px,
-    800: 800px,
-    992: 992px,
-    1\/12: 8.33%,
-    2\/12: 16.67%,
-    3\/12: 25%,
-    4\/12: 33.33%,
-    5\/12: 41.67%,
-    6\/12: 50%,
-    7\/12: 58.33%,
-    8\/12: 66.67%,
-    9\/12: 75%,
-    10\/12: 83.33%,
-    11\/12: 91.67%,
-    12\/12: 100%,
+  auto: auto,
+  fit: fit-content,
+  full: 100%,
+  0: 0px,
+  1: 1px,
+  2: 2px,
+  4: 4px,
+  8: 8px,
+  12: 12px,
+  16: 16px,
+  20: 20px,
+  24: 24px,
+  32: 32px,
+  40: 40px,
+  48: 48px,
+  56: 56px,
+  64: 64px,
+  80: 80px,
+  128: 128px,
+  256: 256px,
+  320: 320px,
+  400: 400px,
+  480: 480px,
+  560: 560px,
+  640: 640px,
+  800: 800px,
+  992: 992px,
+  1\/12: 8.33%,
+  2\/12: 16.67%,
+  3\/12: 25%,
+  4\/12: 33.33%,
+  5\/12: 41.67%,
+  6\/12: 50%,
+  7\/12: 58.33%,
+  8\/12: 66.67%,
+  9\/12: 75%,
+  10\/12: 83.33%,
+  11\/12: 91.67%,
+  12\/12: 100%,
 );
 
-
-@include generate_classes((
+@include generate_classes(
+  (
     class: w,
     property: width,
     responsive: true,
-    values: map-merge($size, (max:  100vw))
-));
+    values:
+      map-merge(
+        $size,
+        (
+          max: 100vw,
+        )
+      ),
+  )
+);
 
-@include generate_classes((
+@include generate_classes(
+  (
     class: min-w,
     property: min-width,
     responsive: true,
-    values: map-merge($size, (max:  100vw))
-));
+    values:
+      map-merge(
+        $size,
+        (
+          max: 100vw,
+        )
+      ),
+  )
+);
 
-@include generate_classes((
+@include generate_classes(
+  (
     class: max-w,
     property: max-width,
     responsive: true,
-    values: map-merge($size, (max:  100vw))
-));
+    values:
+      map-merge(
+        $size,
+        (
+          max: 100vw,
+        )
+      ),
+  )
+);
 
-@include generate_classes((
+@include generate_classes(
+  (
     class: h,
     property: height,
     responsive: true,
-    values: map-merge($size, (max:  100vh))
-));
+    values:
+      map-merge(
+        $size,
+        (
+          max: 100vh,
+        )
+      ),
+  )
+);
 
-@include generate_classes((
+@include generate_classes(
+  (
     class: min-h,
     property: min-height,
     responsive: true,
-    values: map-merge($size, (max:  100vh))
-));
+    values:
+      map-merge(
+        $size,
+        (
+          max: 100vh,
+        )
+      ),
+  )
+);
 
-@include generate_classes((
+@include generate_classes(
+  (
     class: max-h,
     property: max-height,
     responsive: true,
-    values: map-merge($size, (max:  100vh))
-));
+    values:
+      map-merge(
+        $size,
+        (
+          max: 100vh,
+        )
+      ),
+  )
+);

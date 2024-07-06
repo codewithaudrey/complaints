@@ -32,6 +32,10 @@ const layout = {
     prefix: 'visibility',
     values: ['visible', 'hidden', 'collapse'] as const,
   },
+  container: {
+    prefix: 'container',
+    values: ['xs', 'sm', 'md', 'lg', 'xl'] as const,
+  },
 } satisfies VariantMap;
 
 export default layout;

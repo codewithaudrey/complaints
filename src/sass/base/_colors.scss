@@ -1,50 +1,51 @@
-$shades: color-shades((
-    white: var(--white), 
-    black: var(--black),  
-    // red: $red,
-    // yellow: var(--yellow-color),
-    // blue: var(--blue-color),
-    // orange: var(--orange-color),
-));
+$shades: color-shades(
+  (
+    white: var(--white),
+    black: var(--black),
+    current: var(--current),
+    transparent: var(--transparent),
+    inherit: var(--inherit),
+  )
+);
 
-$color: (
+@include generate_classes(
+  (
     class: text,
     property: color,
     pseudos: (
-        hover: ':hover',
-        focus: ':focus',
-        active: ':active',
-        placeholder: '::placeholder',
+      hover: ':hover',
+      focus: ':focus',
+      active: ':active',
+      placeholder: '::placeholder',
     ),
     values: $shades,
+  )
 );
 
-@include generate_classes($color);
-
-$background-color: (
+@include generate_classes(
+  (
     class: bg,
     property: background-color,
     pseudos: (
-        hover: ':hover',
-        focus: ':focus',
-        active: ':active',
-        placeholder: '::placeholder',
+      hover: ':hover',
+      focus: ':focus',
+      active: ':active',
+      placeholder: '::placeholder',
     ),
     values: $shades,
+  )
 );
 
-@include generate_classes($background-color);
-
-$border-color: (
+@include generate_classes(
+  (
     class: border,
     property: border-color,
     pseudos: (
-        hover: ':hover',
-        focus: ':focus',
-        active: ':active',
-        placeholder: '::placeholder',
+      hover: ':hover',
+      focus: ':focus',
+      active: ':active',
+      placeholder: '::placeholder',
     ),
     values: $shades,
+  )
 );
-
-@include generate_classes($border-color);

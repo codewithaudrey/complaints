@@ -1,18 +1,43 @@
-@include generate_classes((
+@include generate_classes(
+  (
     class: cursor,
     property: cursor,
-    values: (auto, default, pointer, wait, text, progress, move, help, not-allowed, alias, copy),
-));
+    values: (
+      auto: auto,
+      default: default,
+      pointer: pointer,
+      wait: wait,
+      text: text,
+      progress: progress,
+      move: move,
+      help: help,
+      not-allowed: not-allowed,
+      alias: alias,
+      copy: copy,
+    ),
+  )
+);
 
-@include generate_classes((
+@include generate_classes(
+  (
     class: pointer,
     property: pointer-events,
-    values: (auto, none)
-));
+    values: (
+      auto: auto,
+      none: none,
+    ),
+  )
+);
 
-
-@include generate_classes((
+@include generate_classes(
+  (
     class: resize,
     property: resize,
-    values: (none, vertical, horizontal, both)
-));
+    values: (
+      none: none,
+      both: both,
+      vertical: vertical,
+      horizontal: horizontal,
+    ),
+  )
+);

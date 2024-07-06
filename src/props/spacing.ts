@@ -94,6 +94,16 @@ const spacing = {
     responsive: true,
     values: VALUES,
   },
+  spaceX: {
+    prefix: 'space-x',
+    responsive: true,
+    values: VALUES,
+  },
+  spaceY: {
+    prefix: 'space-y',
+    responsive: true,
+    values: VALUES,
+  },
   gap: {
     prefix: 'gap',
     responsive: true,

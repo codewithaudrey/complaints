@@ -1,7 +1,7 @@
 import { VariantMap } from '../types/cv.types';
 
 const transition = {
-  transition: {
+  property: {
     prefix: 'transition',
     values: ['all', 'colors', 'shadows', 'opacity', 'transform'] as const,
   },
@@ -15,7 +15,7 @@ const transition = {
   },
   timing: {
     prefix: 'transition-timing',
-    values: ['ease-out', 'ease-in', 'ease-in-out', 'ease', 'linear'],
+    values: ['ease-out', 'ease-in', 'ease-in-out', 'ease', 'linear'] as const,
   },
 } satisfies VariantMap;
 

@@ -1,31 +1,27 @@
 $variables: (
-    xs-container: 0rem,
-    sm-container: 0rem ,
-    md-container: 0rem,
-    lg-container: 0rem,
-    xl-container: 0rem,
+  container-xs: 40rem,
+  container-sm: 52rem,
+  container-md: 80rem,
+  container-lg: 99.2rem,
+  container-xl: 120rem,
 
-    ring-color: #434343,
+  ring-color: #434343,
 
-    border-width: 1px,
+  border-width: 1px,
 
-    white: white,
-    black: black,
-    current: currentColor,
-    transparent: transparent,
-    inherit: inherit,
-    red: #e21010,
-    blue: #1212e7,
-    green: #10e421,
-    yellow: #dada11,
-    orange: #e9910d,
+  white: white,
+  black: black,
+  current: currentColor,
+  transparent: transparent,
+  red: #e21010,
+  blue: #1212e7,
+  green: #10e421,
+  yellow: #dada11,
+  orange: #e9910d,
 
-    space: 0.8rem,
+  space: 0.8rem,
+  radius: 0.8rem,
 
-    default-font-size: 62.5%,
-    default-font-family: Inter,
-
-    default-spacing-value: 1rem,
-    default-size-value: 1rem,
+  default-font-size: 62.5%,
+  default-font-family: Inter,
 );
-

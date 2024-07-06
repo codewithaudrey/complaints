@@ -2,16 +2,12 @@ import { PseudosVariants, VariantMap, Variants } from '../types/cv.types';
 
 // remove any and infer the real type of value
 const helper = (array: string[], value: any, prefix: string) => {
-  const removeExisting = (prefix: string) => {
-    const index = array.findIndex((item) => item.startsWith(prefix));
+  const index = array.findIndex((item) => item.startsWith(prefix));
 
-    // check if it is not last element
-    if (index !== -1) {
-      array.splice(index, 1);
-    }
-  };
-
-  removeExisting(prefix);
+  // check if it is not last element
+  if (index !== -1) {
+    array.splice(index, 1);
+  }
 
   switch (typeof value) {
     case 'object':

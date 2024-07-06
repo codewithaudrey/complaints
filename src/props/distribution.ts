@@ -60,6 +60,6 @@ const distribution = {
     responsive: true,
     values: SELF,
   },
-} as VariantMap;
+} satisfies VariantMap;
 
 export default distribution;

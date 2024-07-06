@@ -1,76 +1,102 @@
 $width: (
-    none: calc(0 / var(--border-width)),
-    1: var(--border-width),
-    2: calc(var(--border-width) * 2),
-    4: calc(var(--border-width) * 4),
-    8: calc(var(--border-width) * 8),
+  none: calc(0 / var(--border-width)),
+  1: var(--border-width),
+  2: calc(var(--border-width) * 2),
+  4: calc(var(--border-width) * 4),
+  8: calc(var(--border-width) * 8),
 );
 
-$border: (
+@include generate_classes(
+  (
     class: border,
     property: border-width,
-    responsive: true,
     values: $width,
+  )
 );
 
-$border-top: (
-    class: border,
+@include generate_classes(
+  (
+    class: border-top,
     property: border-top-width,
-    responsive: true,
     values: $width,
+  )
 );
 
-$border-bottom: (
-    class: border,
+@include generate_classes(
+  (
+    class: border-bottom,
     property: border-bottom-width,
-    responsive: true,
     values: $width,
+  )
 );
 
-$border-left: (
-    class: border,
+@include generate_classes(
+  (
+    class: border-left,
     property: border-left-width,
-    responsive: true,
     values: $width,
+  )
 );
 
-$border-right: (
+@include generate_classes(
+  (
+    class: border-right,
+    property: border-right-width,
+    responsive: true,
+    values: $width,
+  )
+);
+
+@include generate_classes(
+  (
     class: border-t,
     property: border-right-width,
     responsive: true,
     values: $width,
+  )
 );
 
-@include generate_classes($border);
-@include generate_classes($border-top);
-@include generate_classes($border-bottom);
-@include generate_classes($border-left);
-@include generate_classes($border-right);
-
-$divide-x: (
-    class: divide-x,
-    append: ':not(:last-child)',
-    property: border-right-width,
-    values: $width,
-);
-
-@include generate_classes($divide-x);
-
-$divide-y: (
+@include generate_classes(
+  (
     class: divide-y,
     append: ':not(:last-child)',
     property: border-top-width,
     values: $width,
+  )
 );
 
-@include generate_classes($divide-y);
-
-$style: (
+@include generate_classes(
+  (
     class: border,
     property: border-style,
-    values: (none, solid, dotted, dashed, double),
+    values: (
+      none: none,
+      solid: solid,
+      dotted: dotted,
+      dashed: dashed,
+      double: double,
+    ),
+  )
 );
 
-@include generate_classes($style);
-
-
+@include generate_classes(
+  (
+    class: radius,
+    property: border-radius,
+    values: (
+      none: calc(0 / var(--radius)),
+      2xs: calc(var(--radius) / 4),
+      xs: calc(var(--radius) / 2),
+      sm: var(--radius),
+      md: calc(var(--radius) * 1.5),
+      lg: calc(var(--radius) * 2),
+      xl: calc(var(--radius) * 3),
+      2xl: calc(var(--radius) * 4),
+      3xl: calc(var(--radius) * 5),
+      4xl: calc(var(--radius) * 6),
+      5xl: calc(var(--radius) * 7),
+      6xl: calc(var(--radius) * 8),
+      max: calc(var(--radius) * 999),
+    ),
+  )
+);

@@ -1,46 +1,88 @@
-@include generate_classes((
+@include generate_classes(
+  (
     class: aspect-ratio,
     property: aspect-ratio,
     responsive: true,
     values: (
-        auto: auto,
-        1\/1: 1/1,
-        4\/3: 4/3,
-        16\/9: 16/9,
-        9\/16: 9/16,
+      auto: auto,
+      1\/1: 1/1,
+      4\/3: 4/3,
+      16\/9: 16/9,
+      9\/16: 9/16,
     ),
-));
+  )
+);
 
-@include generate_classes((
+@include generate_classes(
+  (
     class: display,
     property: display,
     responsive: true,
     values: (
-        block,
-        inline,
-        inline-block,
-        table,
-        flex, inline-flex, list-item, none, grid, inline-grid,
+      block: block,
+      inline: inline,
+      inline-block: inline-block,
+      table: table,
+      flex: flex,
+      inline-flex: inline-flex,
+      list-item: list-item,
+      none: none,
+      grid: grid,
+      inline-grid: inline-grid,
     ),
-));
+  )
+);
 
-
-@include generate_classes((
-    class: object,
+@include generate_classes(
+  (
+    class: object-fit,
     property: object-fit,
-    values: (fill, contain, cover, scale-down, none),
-));
+    values: (
+      fill: fill,
+      contain: container,
+      cover: cover,
+      scale-down: scale-down,
+    ),
+  )
+);
 
-
-@include generate_classes((
-    class: position, 
+@include generate_classes(
+  (
+    class: position,
     property: position,
     responsive: true,
-    values: (static, sticky, relative, absolute, fixed),
-));
+    values: (
+      static: static,
+      sticky: sticky,
+      relative: relative,
+      absolute: absolute,
+      fixed: fixed,
+    ),
+  )
+);
 
-@include generate_classes((
+@include generate_classes(
+  (
     class: visibility,
-    property:  visibility,
-    values: (visible, hidden, collapse),
-));
+    property: visibility,
+    values: (
+      visible: visible,
+      hidden: hidden,
+      collapse: collapse,
+    ),
+  )
+);
+
+@include generate_classes(
+  (
+    class: container,
+    property: max-width,
+    values: (
+      xs: var(--container-xs),
+      sm: var(--container-sm),
+      md: var(--container-md),
+      lg: var(--container-lg),
+      xl: var(--container-xl),
+    ),
+  )
+);

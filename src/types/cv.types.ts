@@ -11,20 +11,24 @@ export type variantConfig = {
 
 export type VariantMap = { [key: string]: variantConfig };
 
-type VariantsMap<T extends VariantMap> = T[keyof T]['responsive'] extends true
-  ?
-      | T[keyof T]['values'][number]
-      | { [key in Breakpoints]?: T[keyof T]['values'][number] }
-  : T[keyof T]['values'][number];
+// type VariantValue<T extends Record<string>> = T['responsive'] extends true
+//   ? T['values'][number] | { [key in Breakpoints]?: T['values'][number] }
+//   : T['values'][number];
 
 export type Variants<T extends VariantMap> = {
-  [K in keyof T]?: VariantsMap<T>;
+  [K in keyof T]?: T[K]['responsive'] extends true
+    ? T[K]['values'][number] | { [key in Breakpoints]?: T[K]['values'][number] }
+    : T[K]['values'][number];
 };
 
 export type PseudosVariants<T extends VariantMap> = {
   [key in Pseudos]?: {
     [K in keyof T]?: T[K]['pseudos'] extends Array<Pseudos>
-      ? VariantsMap<T>
+      ? T[K]['responsive'] extends true
+        ?
+            | T[K]['values'][number]
+            | { [key in Breakpoints]?: T[K]['values'][number] }
+        : T[K]['values'][number]
       : never;
   };
 };
