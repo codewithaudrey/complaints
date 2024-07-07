@@ -1,10 +1,14 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Footer from './components/Footer';
 
 const RootLayout = () => {
   return (
-    <Outlet/>
-  )
-}
+    <React.Fragment>
+      <Outlet />
+      <Footer />
+    </React.Fragment>
+  );
+};
 
-export default RootLayout
+export default RootLayout;
