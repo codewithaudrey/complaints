@@ -106,205 +106,59 @@ $spaces: (
   )
 );
 
-$spaces-horizontal: (
-  auto: (
-    margin-left: auto,
-    margin-right: auto,
-  ),
-  none: (
-    margin: 0 calc(0 / var(--space)),
-    margin-right: calc(0 / var(--space)),
-  ),
-  2xs: (
-    margin: 0 calc(var(--space) / 4),
-    margin-right: calc(var(--space) / 4),
-  ),
-  xs: (
-    margin-left: calc(var(--space) / 2),
-    margin-right: calc(var(--space) / 2),
-  ),
-  sm: (
-    margin-left: var(--space),
-    margin-right: var(--space),
-  ),
-  md: (
-    margin-left: calc(var(--space) * 1.5),
-    margin-right: calc(var(--space) * 1.5),
-  ),
-  lg: (
-    margin-left: calc(var(--space) * 2),
-    margin-right: calc(var(--space) * 2),
-  ),
-  xl: (
-    margin-left: calc(var(--space) * 2.5),
-    margin-right: calc(var(--space) * 2.5),
-  ),
-  2xl: (
-    margin-left: calc(var(--space) * 3),
-    margin-right: calc(var(--space) * 3),
-  ),
-  3xl: (
-    margin-left: calc(var(--space) * 4),
-    margin-right: calc(var(--space) * 4),
-  ),
-  4xl: (
-    margin-left: calc(var(--space) * 5),
-    margin-right: calc(var(--space) * 5),
-  ),
-  5xl: (
-    margin-left: calc(var(--space) * 6),
-    margin-right: calc(var(--space) * 6),
-  ),
-  6xl: (
-    margin-left: calc(var(--space) * 7),
-    margin-right: calc(var(--space) * 7),
-  ),
-  7xl: (
-    margin-left: calc(var(--space) * 8),
-    margin-right: calc(var(--space) * 8),
-  ),
-  8xl: (
-    margin-left: calc(var(--space) * 9),
-    margin-right: calc(var(--space) * 9),
-  ),
-  9xl: (
-    margin-left: calc(var(--space) * 10),
-    margin-right: calc(var(--space) * 10),
-  ),
-  10xl: (
-    margin-left: calc(var(--space) * 12),
-    margin-right: calc(var(--space) * 12),
-  ),
-  12xl: (
-    margin-left: calc(var(--space) * 16),
-    margin-right: calc(var(--space) * 16),
-  ),
-  max: (
-    margin-left: calc(var(--space) * 20),
-    margin-right: calc(var(--space) * 20),
-  ),
+@include generate_classes(
+  (
+    class: mx,
+    property: (
+      margin-left: margin-left,
+      margin-right: margin-right,
+    ),
+    responsive: true,
+    values: $spaces,
+  )
 );
 
 @include generate_classes(
   (
-    class: mx,
-    property: margin,
+    class: my,
+    property: (
+      margin-left: margin-left,
+      margin-right: margin-right,
+    ),
     responsive: true,
-    values: $spaces-horizontal,
+    values: $spaces,
   )
 );
 
 @include generate_classes(
   (
     class: px,
-    property: padding,
+    property: (
+      padding-left: padding-left,
+      padding-right: padding-right,
+    ),
     responsive: true,
-    values: $spaces-horizontal,
-  )
-);
-
-$spaces-vertical: (
-  auto: (
-    margin-top: auto,
-    margin-bottom: auto,
-  ),
-  none: (
-    margin-top: calc(0 / var(--space)),
-    margin-bottom: calc(0 / var(--space)),
-  ),
-  2xs: (
-    margin-top: calc(var(--space) / 4),
-    margin-bottom: calc(var(--space) / 4),
-  ),
-  xs: (
-    margin-top: calc(var(--space) / 2),
-    margin-bottom: calc(var(--space) / 2),
-  ),
-  sm: (
-    margin-top: var(--space),
-    margin-bottom: var(--space),
-  ),
-  md: (
-    margin-top: calc(var(--space) * 1.5),
-    margin-bottom: calc(var(--space) * 1.5),
-  ),
-  lg: (
-    margin-top: calc(var(--space) * 2),
-    margin-bottom: calc(var(--space) * 2),
-  ),
-  xl: (
-    margin-top: calc(var(--space) * 2.5),
-    margin-bottom: calc(var(--space) * 2.5),
-  ),
-  2xl: (
-    margin-top: calc(var(--space) * 3),
-    margin-bottom: calc(var(--space) * 3),
-  ),
-  3xl: (
-    margin-top: calc(var(--space) * 4),
-    margin-bottom: calc(var(--space) * 4),
-  ),
-  4xl: (
-    margin-top: calc(var(--space) * 5),
-    margin-bottom: calc(var(--space) * 5),
-  ),
-  5xl: (
-    margin-top: calc(var(--space) * 6),
-    margin-bottom: calc(var(--space) * 6),
-  ),
-  6xl: (
-    margin-top: calc(var(--space) * 7),
-    margin-bottom: calc(var(--space) * 7),
-  ),
-  7xl: (
-    margin-top: calc(var(--space) * 8),
-    margin-bottom: calc(var(--space) * 8),
-  ),
-  8xl: (
-    margin-top: calc(var(--space) * 9),
-    margin-bottom: calc(var(--space) * 9),
-  ),
-  9xl: (
-    margin-top: calc(var(--space) * 10),
-    margin-bottom: calc(var(--space) * 10),
-  ),
-  10xl: (
-    margin-top: calc(var(--space) * 12),
-    margin-bottom: calc(var(--space) * 12),
-  ),
-  12xl: (
-    margin-top: calc(var(--space) * 16),
-    margin-bottom: calc(var(--space) * 16),
-  ),
-  max: (
-    margin-top: calc(var(--space) * 20),
-    margin-bottom: calc(var(--space) * 20),
-  ),
-);
-
-@include generate_classes(
-  (
-    class: my,
-    property: margin,
-    responsive: true,
-    values: $spaces-vertical,
+    values: $spaces,
   )
 );
 
 @include generate_classes(
   (
     class: py,
-    property: padding,
+    property: (
+      padding-top: padding-top,
+      padding-bottom: padding-bottom,
+    ),
     responsive: true,
-    values: $spaces-vertical,
+    values: $spaces,
   )
 );
 
 @include generate_classes(
   (
     class: space-y,
-    append: ':not(:last-child)',
-    property: padding-top,
+    append: '> *:not(:first-child)',
+    property: margin-top,
     responsive: true,
     values: $spaces,
   )
@@ -313,8 +167,8 @@ $spaces-vertical: (
 @include generate_classes(
   (
     class: space-x,
-    append: ':not(:last-child)',
-    property: padding-left,
+    append: '> *:not(:first-child)',
+    property: margin-left,
     responsive: true,
     values: $spaces,
   )

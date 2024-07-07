@@ -5,6 +5,10 @@
   border: 0px solid #c5c4cb;
 }
 
+a {
+  text-underline-offset: 0.35em;
+}
+
 @font-face {
   font-family: Inter;
   src: url('../assets/fonts/Inter-Regular.woff2') format('woff2');
@@ -41,7 +45,9 @@
   @include set-variables($variables);
 }
 
-html {
+html,
+button,
+input {
   font-size: var(--default-font-size);
   font-family: var(--default-font-family), sans-serif;
   font-kerning: normal;

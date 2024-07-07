@@ -129,3 +129,15 @@ $size: (
       ),
   )
 );
+
+@include generate_classes(
+  (
+    class: size,
+    property: (
+      width: width,
+      height: height,
+    ),
+    responsive: true,
+    values: $size,
+  )
+);

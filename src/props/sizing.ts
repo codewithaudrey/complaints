@@ -74,6 +74,11 @@ const sizing = {
     responsive: true,
     values: VALUES,
   },
+  size: {
+    prefix: 'size',
+    responsive: true,
+    values: VALUES,
+  },
 } satisfies VariantMap;
 
 export default sizing;

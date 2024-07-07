@@ -1,46 +1,62 @@
-@include generate_classes((
+@include generate_classes(
+  (
     class: flex,
     property: flex,
     responsive: true,
     values: (
-        full: '1 1 0%',
-        auto: '1 1 auto',
-        initial: '0 1 auto',
-        none: 'none',
+      full: '1 1 0%',
+      auto: '1 1 auto',
+      initial: '0 1 auto',
+      none: 'none',
     ),
-));
+  )
+);
 
-@include generate_classes((
+@include generate_classes(
+  (
     class: flex,
     property: flex-wrap,
     responsive: true,
-    values: (wrap, wrap-reverse, nowrap),
-));
+    values: (
+      wrap: wrap,
+      nowrap: nowrap,
+      wrap-reverse: wrap-reverse,
+    ),
+  )
+);
 
-@include generate_classes((
+@include generate_classes(
+  (
     class: flex,
     property: flex-direction,
     responsive: true,
-    values: (row, row-reverse, column, column-reverse)
-));
+    values: (
+      row: row,
+      column: column,
+      row-reverse: row-reverse,
+      column-reverse: column-reverse,
+    ),
+  )
+);
 
-
-@include generate_classes((
+@include generate_classes(
+  (
     class: basis,
     property: flex-basis,
     responsive: true,
     values: (
-        1\/12: 8.33%,
-        2\/12: 16.67%,
-        3\/12: 25%,
-        4\/12: 33.33%,
-        5\/12: 41.67%,
-        6\/12: 50%,
-        7\/12: 58.33%,
-        8\/12: 66.67%,
-        9\/12: 75%,
-        10\/12: 83.33%,
-        11\/12: 91.67%,
-        full: 100%,
+      1\/12: 8.33%,
+      2\/12: 16.67%,
+      3\/12: 25%,
+      4\/12: 33.33%,
+      5\/12: 41.67%,
+      6\/12: 50%,
+      7\/12: 58.33%,
+      8\/12: 66.67%,
+      9\/12: 75%,
+      10\/12: 83.33%,
+      11\/12: 91.67%,
+      full: 100%,
     ),
-));
+  )
+);

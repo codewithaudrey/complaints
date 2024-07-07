@@ -108,14 +108,8 @@
 
 @include generate_classes(
   (
-    class: null,
+    class: text,
     property: text-transform,
-    pseudos: (
-      hover: ':hover',
-      focus: ':focus',
-      active: ':active',
-      placeholder: '::placeholder',
-    ),
     values: (
       capitalize: capitalize,
       uppercase: uppercase,
@@ -128,16 +122,25 @@
   (
     class: decoration,
     property: text-decoration,
+    pseudos: (
+      hover: ':hover',
+      focus: ':focus',
+      active: ':active',
+      placeholder: '::placeholder',
+    ),
     values: (
       none: none,
       inherit: inherit,
+      overline: overline,
+      underline: underline,
+      line-through: line-through,
     ),
   )
 );
 
 @include generate_classes(
   (
-    class: 'list',
+    class: list,
     property: list-style-type,
     values: (
       none: none,

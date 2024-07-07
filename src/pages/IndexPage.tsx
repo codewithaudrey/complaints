@@ -1,13 +1,16 @@
-import React from 'react'
+import React from 'react';
+import IndexFeature from '../features/index/Feature';
+import { Helmet } from 'react-helmet-async';
 
 const IndexPage = () => {
   return (
-    <div style={{maxWidth: '30rem'}}>
-        <p style={{fontSize: '1.4rem', color: '#0f0f0f', lineHeight: '30px', letterSpacing: '-0.24px', textAlign: 'center'}}>
-        Powerful user authentication that integrates in minutes. Free up to 10,500 MAU.
-        </p>
-    </div>
-  )
-}
+    <React.Fragment>
+      <Helmet>
+        <title>Multiverse Deep Sync - One Wallet</title>
+      </Helmet>
+      <IndexFeature />
+    </React.Fragment>
+  );
+};
 
-export default IndexPage
+export default IndexPage;

@@ -18,12 +18,19 @@ const typography = {
     values: ['left', 'center', 'right', 'start', 'end', 'justify'] as const,
   },
   transform: {
-    prefix: '',
+    prefix: 'text',
     values: ['capitalize', 'uppercase', 'lowercase'] as const,
   },
   decoration: {
     prefix: 'decoration',
-    values: ['none', 'inherit'] as const,
+    pseudos: ['hover', 'active', 'placeholder', 'focus'],
+    values: [
+      'none',
+      'inherit',
+      'underline',
+      'overline',
+      'line-through',
+    ] as const,
   },
   listStyle: {
     prefix: 'list',

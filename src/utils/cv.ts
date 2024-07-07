@@ -2,22 +2,16 @@ import { PseudosVariants, VariantMap, Variants } from '../types/cv.types';
 
 // remove any and infer the real type of value
 const helper = (array: string[], value: any, prefix: string) => {
-  const index = array.findIndex((item) => item.startsWith(prefix));
-
-  // check if it is not last element
-  if (index !== -1) {
-    array.splice(index, 1);
-  }
-
   switch (typeof value) {
     case 'object':
-      return Object.entries(value).forEach(([breakpoint, value]) => {
-        if (value !== undefined) {
-          array.push(
-            breakpoint === 'initial'
-              ? `${prefix}-${value}`
-              : `${breakpoint}:${prefix}-${value}`
-          );
+      return Object.entries(value).forEach(([breakpoint, entryValue]) => {
+        const prefixedValue =
+          breakpoint === 'initial'
+            ? `${prefix}-${entryValue}`
+            : `${breakpoint}:${prefix}-${entryValue}`;
+
+        if (entryValue !== undefined) {
+          array.push(prefixedValue);
         }
       });
     case 'undefined':
@@ -52,8 +46,17 @@ const cv =
     Object.entries(prop).forEach(([key, value]) => {
       const variant = variants[key];
 
-      if (variant && value) {
-        return helper(result, value, variant.prefix);
+      if (value && variant) {
+        variant.values.forEach((v) => {
+          const index = result.findIndex(
+            (data) => data === `${variant.prefix}-${v}`
+          );
+          if (index !== -1) {
+            result.splice(index, 1);
+            return;
+          }
+        });
+        helper(result, value, variant.prefix);
       }
     });
 

@@ -1,5 +1,17 @@
-$self: (auto, start, center, end, baseline);
-$items: (start, end, center, baseline, stretch);
+$self: (
+  auto: auto,
+  start: start,
+  center: center,
+  end: end,
+  baseline: baseline,
+);
+$items: (
+  start: start,
+  end: end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch,
+);
 $content: (
   normal: normal,
   start: start,
