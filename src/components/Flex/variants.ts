@@ -55,6 +55,7 @@ const flexVariants = cv({
     justifyItems: distribution.justifyItems,
     justifySelf: distribution.justifySelf,
     flex: flex.flex,
+    flexDirection: flex.directions,
     flexBasis: flex.basis,
     gridColumnSpan: grid.columnSpan,
     gridRowSpan: grid.rowSpan,
