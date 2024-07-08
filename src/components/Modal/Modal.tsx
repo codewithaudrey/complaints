@@ -33,8 +33,9 @@ const Action = React.forwardRef(
 const Body = React.forwardRef((props: Flex.Props, ref: Flex.Ref) => {
   const {
     style,
-    width = 'max',
-    height = 'max',
+    px = 'md',
+    width = 'full',
+    height = 'full',
     position = 'fixed',
     alignItems = 'center',
     ...rest
@@ -43,6 +44,7 @@ const Body = React.forwardRef((props: Flex.Props, ref: Flex.Ref) => {
 
   const defaultStyle: React.CSSProperties = {
     top: 0,
+    zIndex: 1,
     opacity: isOpen ? 1 : 0,
     visibility: isOpen ? 'visible' : 'hidden',
   };
@@ -51,6 +53,7 @@ const Body = React.forwardRef((props: Flex.Props, ref: Flex.Ref) => {
     children: (
       <Flex
         ref={ref}
+        px={px}
         width={width}
         height={height}
         position={position}
@@ -73,7 +76,8 @@ const Overlay = React.forwardRef((props: Box.Props, ref: Box.Ref) => {
   } = props;
 
   const defaultStyle: React.CSSProperties = {
-    zIndex: -1,
+    top: 0,
+    left: 0,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   };
 

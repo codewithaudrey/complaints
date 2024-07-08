@@ -5,6 +5,7 @@ import Box from '../../../components/Box/Box';
 import Text from '../../../components/Text/Text';
 import Button from '../../../components/Button/Button';
 import Flex from '../../../components/Flex/Flex';
+import WalletFeature from '../../wallet/Feature';
 
 const Hero = () => {
   return (
@@ -43,13 +44,15 @@ const Hero = () => {
               as={'h1'}
               weight={500}
               align={'center'}
+              color={'gray-100'}
               size={{ initial: 40, sm: 64, md: 80 }}
             >
               One wallet. All chains.
             </Text>
             <Text
-              align={'center'}
               as={'p'}
+              align={'center'}
+              color={'gray-80'}
             >
               We are unifying Web3 by providing best-in-class, self-custodial,
               and multichain support using modern and strong encryption that is
@@ -59,7 +62,7 @@ const Hero = () => {
               <Text color={'primary-90'}>Chain Cloud and Sequence.</Text>
             </Text>
           </Box>
-          <Button>Connect Wallet</Button>
+          <WalletFeature trigger={<Button>Connect Wallet</Button>} />
         </Flex>
       </Container>
     </Section>

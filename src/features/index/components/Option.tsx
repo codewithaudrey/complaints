@@ -6,6 +6,7 @@ import options from '../../../data/options';
 import Flex from '../../../components/Flex/Flex';
 import Box from '../../../components/Box/Box';
 import Text from '../../../components/Text/Text';
+import WalletFeature from '../../wallet/Feature';
 
 const Option = () => {
   return (
@@ -45,38 +46,42 @@ const Option = () => {
           gridColumn={{ initial: 1, sm: 2, md: 3 }}
         >
           {options.map((option, index) => (
-            <Flex
-              p={'md'}
-              gap={'lg'}
+            <WalletFeature
               key={index}
-              radius={'lg'}
-              cursor={'pointer'}
-              pseudos={{ hover: { backgroundColor: 'gray-95' } }}
-            >
-              <option.icon
-                size={30}
-                className='radius-max bg-gray-100 text-gray-50 p-xs'
-              />
-              <Box
-                flex={'full'}
-                spaceY={'xs'}
-              >
-                <Text
-                  as={'h3'}
-                  size={16}
-                  weight={500}
-                  color={'primary-60'}
+              trigger={
+                <Flex
+                  p={'md'}
+                  gap={'lg'}
+                  radius={'lg'}
+                  cursor={'pointer'}
+                  pseudos={{ hover: { backgroundColor: 'gray-95' } }}
                 >
-                  {option.title}
-                </Text>
-                <Text
-                  as={'p'}
-                  color={'gray-40'}
-                >
-                  {option.body}
-                </Text>
-              </Box>
-            </Flex>
+                  <option.icon
+                    size={30}
+                    className='radius-max bg-gray-100 text-gray-50 p-xs'
+                  />
+                  <Box
+                    flex={'full'}
+                    spaceY={'xs'}
+                  >
+                    <Text
+                      as={'h3'}
+                      size={16}
+                      weight={500}
+                      color={'primary-60'}
+                    >
+                      {option.title}
+                    </Text>
+                    <Text
+                      as={'p'}
+                      color={'gray-40'}
+                    >
+                      {option.body}
+                    </Text>
+                  </Box>
+                </Flex>
+              }
+            />
           ))}
         </Grid>
       </Container>

@@ -14,7 +14,7 @@ const textVariants = cv({
   defaultVariants: {
     size: 16,
     weight: 400,
-    color: 'gray-100',
+    color: 'gray-10',
   },
 });
 

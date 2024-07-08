@@ -59,8 +59,17 @@ $width: (
 @include generate_classes(
   (
     class: divide-y,
-    append: ':not(:last-child)',
-    property: border-top-width,
+    append: '> * :not(:first-child)',
+    property: border-bottom-width,
+    values: $width,
+  )
+);
+
+@include generate_classes(
+  (
+    class: divide-x,
+    append: '> * :not(:first-child)',
+    property: border-left-width,
     values: $width,
   )
 );

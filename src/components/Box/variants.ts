@@ -72,11 +72,7 @@ const boxVariants = cv({
     transitionDuration: transition.duration,
     transitionTimingFunction: transition.timing,
   },
-  defaultVariants: {
-    transition: 'all',
-    transitionDuration: 200,
-    transitionTimingFunction: 'ease-in-out',
-  },
+  defaultVariants: {},
 });
 
 export default boxVariants;

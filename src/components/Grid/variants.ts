@@ -83,9 +83,6 @@ const gridVariants = cv({
   },
   defaultVariants: {
     display: 'grid',
-    transition: 'all',
-    transitionDuration: 200,
-    transitionTimingFunction: 'ease-in-out',
   },
 });
 

@@ -16,18 +16,19 @@ const Form = <Values extends FormikValues>(props: FormikConfig<Values>) => {
   return <Formik {...props} />;
 };
 
-const Wrapper = React.forwardRef((props: FormikFormProps) => {
+const Wrapper = (props: FormikFormProps) => {
   return <FormWrapper {...props} />;
-});
+};
 
 const Field = React.forwardRef(
   (props: Box.Props & { name: string }, ref: Box.Ref) => {
-    const { name, ...rest } = props;
+    const { name, spaceY = 'sm', ...rest } = props;
 
     return (
       <FieldProvider name={name}>
         <Box
           ref={ref}
+          spaceY={spaceY}
           {...rest}
         />
       </FieldProvider>
@@ -80,13 +81,15 @@ const Label = React.forwardRef((props: Text.Props, ref: Text.Ref) => {
 });
 
 const Helper = React.forwardRef((props: Text.Props, ref: Text.Ref) => {
-  const { color, children, ...rest } = props;
+  const { as = 'p', size = 14, color, children, ...rest } = props;
   const { meta } = useField();
 
   return (
     <Text
       ref={ref}
-      color={meta.error ? 'red-60' : 'gray-40'}
+      as={as}
+      size={size}
+      color={meta.error ? 'red-60' : 'gray-60'}
       {...rest}
     >
       {meta.error ? meta.error : children}

@@ -32,9 +32,7 @@ const sectionVariants = cv({
     backgroundColor: color.background,
     borderColor: color.border,
   },
-  defaultVariants: {
-    display: 'block',
-  },
+  defaultVariants: {},
 });
 
 export default sectionVariants;

@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   border: 0px solid #c5c4cb;
+  transition: all 0.3s ease-in-out;
 }
 
 a {
@@ -57,4 +58,8 @@ input {
   -moz-osx-font-smoothing: antialiased;
   font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'onum', 'pnum';
   font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+body.portal {
+  overflow-y: hidden;
 }

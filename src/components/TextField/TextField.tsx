@@ -44,7 +44,7 @@ const TextField = React.forwardRef(
       size,
       align,
       weight,
-      pseudos = { placeholder: { color: 'gray-70' } },
+      pseudos = { placeholder: { color: 'gray-60' } },
       ...rest
     } = props;
     const Component = (as || 'input') as React.ElementType;

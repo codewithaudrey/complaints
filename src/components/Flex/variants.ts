@@ -82,9 +82,6 @@ const flexVariants = cv({
   },
   defaultVariants: {
     display: 'flex',
-    transition: 'all',
-    transitionDuration: 200,
-    transitionTimingFunction: 'ease-in-out',
   },
 });
 

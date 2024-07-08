@@ -1,6 +1,7 @@
 import border from '../../props/border';
 import color from '../../props/color';
 import layout from '../../props/layout';
+import sizing from '../../props/sizing';
 import spacing from '../../props/spacing';
 import cv from '../../utils/cv';
 
@@ -20,6 +21,7 @@ const containerVariants = cv({
     me: spacing.me,
     mt: spacing.mt,
     mb: spacing.mb,
+    width: sizing.width,
     display: layout.display,
     position: layout.position,
     container: layout.container,
@@ -36,6 +38,7 @@ const containerVariants = cv({
   defaultVariants: {
     mx: 'auto',
     container: 'sm',
+    width: 'full',
     display: 'block',
   },
 });

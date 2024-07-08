@@ -53,9 +53,6 @@ const buttonVariants = cv({
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    transition: 'all',
-    transitionDuration: 300,
-    transitionTimingFunction: 'ease-in-out',
   },
 });
 

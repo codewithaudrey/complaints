@@ -7,7 +7,16 @@ import {
 } from '../../types/polymorphic.types';
 
 namespace Text {
-  type Elements = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  type Elements =
+    | 'p'
+    | 'span'
+    | 'label'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6';
   export type Ref = PolymorphicRef<Elements>;
   export type Props = PolymorphicComponentWithRef<
     Elements,
