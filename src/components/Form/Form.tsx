@@ -22,7 +22,7 @@ const Wrapper = (props: FormikFormProps) => {
 
 const Field = React.forwardRef(
   (props: Box.Props & { name: string }, ref: Box.Ref) => {
-    const { name, spaceY = 'sm', ...rest } = props;
+    const { name, spaceY = 'xs', ...rest } = props;
 
     return (
       <FieldProvider name={name}>
@@ -44,7 +44,8 @@ const Block = React.forwardRef((props: Flex.Props, ref: Flex.Ref) => {
     border = 1,
     radius = 'md',
     position = 'relative',
-    borderColor = 'gray-95',
+    borderColor = 'gray-30',
+    backgroundColor = 'gray-30',
     ...rest
   } = props;
 
@@ -59,9 +60,14 @@ const Block = React.forwardRef((props: Flex.Props, ref: Flex.Ref) => {
       border={border}
       radius={radius}
       position={position}
+      backgroundColor={backgroundColor}
       style={{ ...defaultStyle, ...style }}
       borderColor={
-        meta.error ? 'red-60' : meta.touched ? 'primary-60' : borderColor
+        meta.touched && meta.error
+          ? 'red-50'
+          : meta.touched
+          ? 'gray-50'
+          : borderColor
       }
       {...rest}
     />
@@ -92,7 +98,7 @@ const Helper = React.forwardRef((props: Text.Props, ref: Text.Ref) => {
       color={meta.error ? 'red-60' : 'gray-60'}
       {...rest}
     >
-      {meta.error ? meta.error : children}
+      {meta.error && meta.touched ? meta.error : children}
     </Text>
   );
 });

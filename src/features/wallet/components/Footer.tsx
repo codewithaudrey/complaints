@@ -4,7 +4,11 @@ import Button from '../../../components/Button/Button';
 import Modal from '../../../components/Modal/Modal';
 import useStep from '../../../hooks/useStep';
 
-const Footer = () => {
+type FooterProps = {
+  label?: string;
+};
+
+const Footer = ({ label }: FooterProps) => {
   const { reset } = useStep();
 
   return (
@@ -14,7 +18,7 @@ const Footer = () => {
       gapX={'sm'}
       borderTop={1}
       justifyContent={'end'}
-      borderColor={'gray-95'}
+      borderColor={'gray-30'}
     >
       <Modal.Action
         action={'dismiss'}
@@ -23,10 +27,10 @@ const Footer = () => {
         <Button
           px={'md'}
           height={32}
-          color={'gray-40'}
           type={'button'}
+          color={'gray-60'}
           backgroundColor={'transparent'}
-          pseudos={{ hover: { backgroundColor: 'gray-100' } }}
+          pseudos={{ hover: { backgroundColor: 'gray-30' } }}
         >
           Cancel
         </Button>
@@ -36,7 +40,7 @@ const Footer = () => {
         height={32}
         type={'submit'}
       >
-        Connect
+        {label ? label : 'Connect'}
       </Button>
     </Flex>
   );

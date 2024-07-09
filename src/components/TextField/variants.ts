@@ -35,6 +35,8 @@ const textFieldVariants = cv({
     weight: 400,
     height: 'full',
     width: 'full',
+    color: 'white',
+    backgroundColor: 'inherit',
   },
 });
 

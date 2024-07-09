@@ -3,7 +3,7 @@ import Modal from '../../components/Modal/Modal';
 import Wallets from './components/Wallets';
 import Panel from './components/Panel';
 import Step from '../../components/Step/Step';
-import Loader from './components/Loader';
+import Loader from './components/Connect';
 
 type WalletFeatureProps = {
   trigger: React.ReactNode;

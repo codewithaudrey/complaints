@@ -13,7 +13,7 @@ const Header = ({ label }: HeaderProps) => {
       py={'md'}
       borderBottom={1}
       alignItems={'center'}
-      borderColor={'gray-95'}
+      borderColor={'gray-30'}
       justifyContent={'between'}
     >
       <Text

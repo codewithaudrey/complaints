@@ -100,7 +100,7 @@ const Content = React.forwardRef(
       radius = 'lg',
       container = 'xs',
       position = 'relative',
-      backgroundColor = 'white',
+      backgroundColor = 'gray-20',
       ...rest
     } = props;
 

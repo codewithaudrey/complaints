@@ -54,6 +54,7 @@ const boxVariants = cv({
     cursor: interaction.cursor,
     pointerEvent: interaction.pointer,
     resize: interaction.resize,
+    size: sizing.size,
     width: sizing.width,
     minWidth: sizing.minWidth,
     maxWidth: sizing.maxWidth,

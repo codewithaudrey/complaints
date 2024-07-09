@@ -24,7 +24,6 @@ const Option = () => {
             as={'h2'}
             weight={500}
             align={'center'}
-            color={'gray-10'}
             transform={'capitalize'}
             size={{ initial: 32, sm: 56 }}
           >
@@ -33,33 +32,40 @@ const Option = () => {
           <Text
             as={'p'}
             align={'center'}
-            color={'gray-40'}
+            color={'gray-60'}
           >
             You can also connect your wallet by selecting any of the{' '}
             <Text color={'primary-60'}>option</Text> below.
           </Text>
         </Box>
 
-        <Grid
-          mt={'5xl'}
-          gap={{ initial: 'xl', sm: '3xl' }}
-          gridColumn={{ initial: 1, sm: 2, md: 3 }}
-        >
-          {options.map((option, index) => (
-            <WalletFeature
-              key={index}
-              trigger={
+        <WalletFeature
+          trigger={
+            <Grid
+              mt={'5xl'}
+              gap={{ initial: 'xl', sm: '3xl' }}
+              gridColumn={{ initial: 1, sm: 2, md: 3 }}
+            >
+              {options.map((option, index) => (
                 <Flex
                   p={'md'}
                   gap={'lg'}
+                  key={index}
                   radius={'lg'}
                   cursor={'pointer'}
-                  pseudos={{ hover: { backgroundColor: 'gray-95' } }}
+                  pseudos={{ hover: { backgroundColor: 'gray-20' } }}
                 >
-                  <option.icon
-                    size={30}
-                    className='radius-max bg-gray-100 text-gray-50 p-xs'
-                  />
+                  <Box
+                    p={'xs'}
+                    radius={'max'}
+                    height={'fit'}
+                    backgroundColor={'gray-20'}
+                  >
+                    <option.icon
+                      size={24}
+                      className='text-gray-50'
+                    />
+                  </Box>
                   <Box
                     flex={'full'}
                     spaceY={'xs'}
@@ -74,16 +80,16 @@ const Option = () => {
                     </Text>
                     <Text
                       as={'p'}
-                      color={'gray-40'}
+                      color={'gray-60'}
                     >
                       {option.body}
                     </Text>
                   </Box>
                 </Flex>
-              }
-            />
-          ))}
-        </Grid>
+              ))}
+            </Grid>
+          }
+        />
       </Container>
     </Section>
   );
