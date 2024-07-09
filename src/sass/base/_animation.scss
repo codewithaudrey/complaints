@@ -1,0 +1,12 @@
+.animate--loader {
+  animation: Loader 1.25s linear infinite forwards;
+}
+
+@keyframes Loader {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(20rem);
+  }
+}
