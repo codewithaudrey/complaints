@@ -4,9 +4,6 @@
   box-sizing: border-box;
   border: 0px solid #c5c4cb;
   transition: all 0.3s ease-in-out;
-}
-
-a {
   text-underline-offset: 0.35em;
 }
 
@@ -44,7 +41,6 @@ a {
   --container-md: 80rem;
   --container-lg: 102.4rem;
   --container-xl: 136.6rem;
-  --ring-color: #434343;
   --border-width: 1px;
   --white: white;
   --black: black;
@@ -1057,6 +1053,226 @@ body.portal {
 
 .placeholder\:text-orange-100::placeholder {
   color: #fff3e2;
+}
+
+.text-red-10 {
+  color: #140202;
+}
+
+.hover\:text-red-10:hover {
+  color: #140202;
+}
+
+.focus\:text-red-10:focus {
+  color: #140202;
+}
+
+.active\:text-red-10:active {
+  color: #140202;
+}
+
+.placeholder\:text-red-10::placeholder {
+  color: #140202;
+}
+
+.text-red-20 {
+  color: #3d0505;
+}
+
+.hover\:text-red-20:hover {
+  color: #3d0505;
+}
+
+.focus\:text-red-20:focus {
+  color: #3d0505;
+}
+
+.active\:text-red-20:active {
+  color: #3d0505;
+}
+
+.placeholder\:text-red-20::placeholder {
+  color: #3d0505;
+}
+
+.text-red-30 {
+  color: #660909;
+}
+
+.hover\:text-red-30:hover {
+  color: #660909;
+}
+
+.focus\:text-red-30:focus {
+  color: #660909;
+}
+
+.active\:text-red-30:active {
+  color: #660909;
+}
+
+.placeholder\:text-red-30::placeholder {
+  color: #660909;
+}
+
+.text-red-40 {
+  color: #900d0d;
+}
+
+.hover\:text-red-40:hover {
+  color: #900d0d;
+}
+
+.focus\:text-red-40:focus {
+  color: #900d0d;
+}
+
+.active\:text-red-40:active {
+  color: #900d0d;
+}
+
+.placeholder\:text-red-40::placeholder {
+  color: #900d0d;
+}
+
+.text-red-50 {
+  color: #b91010;
+}
+
+.hover\:text-red-50:hover {
+  color: #b91010;
+}
+
+.focus\:text-red-50:focus {
+  color: #b91010;
+}
+
+.active\:text-red-50:active {
+  color: #b91010;
+}
+
+.placeholder\:text-red-50::placeholder {
+  color: #b91010;
+}
+
+.text-red-60 {
+  color: #e21414;
+}
+
+.hover\:text-red-60:hover {
+  color: #e21414;
+}
+
+.focus\:text-red-60:focus {
+  color: #e21414;
+}
+
+.active\:text-red-60:active {
+  color: #e21414;
+}
+
+.placeholder\:text-red-60::placeholder {
+  color: #e21414;
+}
+
+.text-red-70 {
+  color: #ed3636;
+}
+
+.hover\:text-red-70:hover {
+  color: #ed3636;
+}
+
+.focus\:text-red-70:focus {
+  color: #ed3636;
+}
+
+.active\:text-red-70:active {
+  color: #ed3636;
+}
+
+.placeholder\:text-red-70::placeholder {
+  color: #ed3636;
+}
+
+.text-red-80 {
+  color: #f15f5f;
+}
+
+.hover\:text-red-80:hover {
+  color: #f15f5f;
+}
+
+.focus\:text-red-80:focus {
+  color: #f15f5f;
+}
+
+.active\:text-red-80:active {
+  color: #f15f5f;
+}
+
+.placeholder\:text-red-80::placeholder {
+  color: #f15f5f;
+}
+
+.text-red-90 {
+  color: #f48888;
+}
+
+.hover\:text-red-90:hover {
+  color: #f48888;
+}
+
+.focus\:text-red-90:focus {
+  color: #f48888;
+}
+
+.active\:text-red-90:active {
+  color: #f48888;
+}
+
+.placeholder\:text-red-90::placeholder {
+  color: #f48888;
+}
+
+.text-red-95 {
+  color: #f8b1b1;
+}
+
+.hover\:text-red-95:hover {
+  color: #f8b1b1;
+}
+
+.focus\:text-red-95:focus {
+  color: #f8b1b1;
+}
+
+.active\:text-red-95:active {
+  color: #f8b1b1;
+}
+
+.placeholder\:text-red-95::placeholder {
+  color: #f8b1b1;
+}
+
+.text-red-100 {
+  color: #fcdbdb;
+}
+
+.hover\:text-red-100:hover {
+  color: #fcdbdb;
+}
+
+.focus\:text-red-100:focus {
+  color: #fcdbdb;
+}
+
+.active\:text-red-100:active {
+  color: #fcdbdb;
+}
+
+.placeholder\:text-red-100::placeholder {
+  color: #fcdbdb;
 }
 
 .text-primary-10 {
@@ -2479,6 +2695,226 @@ body.portal {
   background-color: #fff3e2;
 }
 
+.bg-red-10 {
+  background-color: #140202;
+}
+
+.hover\:bg-red-10:hover {
+  background-color: #140202;
+}
+
+.focus\:bg-red-10:focus {
+  background-color: #140202;
+}
+
+.active\:bg-red-10:active {
+  background-color: #140202;
+}
+
+.placeholder\:bg-red-10::placeholder {
+  background-color: #140202;
+}
+
+.bg-red-20 {
+  background-color: #3d0505;
+}
+
+.hover\:bg-red-20:hover {
+  background-color: #3d0505;
+}
+
+.focus\:bg-red-20:focus {
+  background-color: #3d0505;
+}
+
+.active\:bg-red-20:active {
+  background-color: #3d0505;
+}
+
+.placeholder\:bg-red-20::placeholder {
+  background-color: #3d0505;
+}
+
+.bg-red-30 {
+  background-color: #660909;
+}
+
+.hover\:bg-red-30:hover {
+  background-color: #660909;
+}
+
+.focus\:bg-red-30:focus {
+  background-color: #660909;
+}
+
+.active\:bg-red-30:active {
+  background-color: #660909;
+}
+
+.placeholder\:bg-red-30::placeholder {
+  background-color: #660909;
+}
+
+.bg-red-40 {
+  background-color: #900d0d;
+}
+
+.hover\:bg-red-40:hover {
+  background-color: #900d0d;
+}
+
+.focus\:bg-red-40:focus {
+  background-color: #900d0d;
+}
+
+.active\:bg-red-40:active {
+  background-color: #900d0d;
+}
+
+.placeholder\:bg-red-40::placeholder {
+  background-color: #900d0d;
+}
+
+.bg-red-50 {
+  background-color: #b91010;
+}
+
+.hover\:bg-red-50:hover {
+  background-color: #b91010;
+}
+
+.focus\:bg-red-50:focus {
+  background-color: #b91010;
+}
+
+.active\:bg-red-50:active {
+  background-color: #b91010;
+}
+
+.placeholder\:bg-red-50::placeholder {
+  background-color: #b91010;
+}
+
+.bg-red-60 {
+  background-color: #e21414;
+}
+
+.hover\:bg-red-60:hover {
+  background-color: #e21414;
+}
+
+.focus\:bg-red-60:focus {
+  background-color: #e21414;
+}
+
+.active\:bg-red-60:active {
+  background-color: #e21414;
+}
+
+.placeholder\:bg-red-60::placeholder {
+  background-color: #e21414;
+}
+
+.bg-red-70 {
+  background-color: #ed3636;
+}
+
+.hover\:bg-red-70:hover {
+  background-color: #ed3636;
+}
+
+.focus\:bg-red-70:focus {
+  background-color: #ed3636;
+}
+
+.active\:bg-red-70:active {
+  background-color: #ed3636;
+}
+
+.placeholder\:bg-red-70::placeholder {
+  background-color: #ed3636;
+}
+
+.bg-red-80 {
+  background-color: #f15f5f;
+}
+
+.hover\:bg-red-80:hover {
+  background-color: #f15f5f;
+}
+
+.focus\:bg-red-80:focus {
+  background-color: #f15f5f;
+}
+
+.active\:bg-red-80:active {
+  background-color: #f15f5f;
+}
+
+.placeholder\:bg-red-80::placeholder {
+  background-color: #f15f5f;
+}
+
+.bg-red-90 {
+  background-color: #f48888;
+}
+
+.hover\:bg-red-90:hover {
+  background-color: #f48888;
+}
+
+.focus\:bg-red-90:focus {
+  background-color: #f48888;
+}
+
+.active\:bg-red-90:active {
+  background-color: #f48888;
+}
+
+.placeholder\:bg-red-90::placeholder {
+  background-color: #f48888;
+}
+
+.bg-red-95 {
+  background-color: #f8b1b1;
+}
+
+.hover\:bg-red-95:hover {
+  background-color: #f8b1b1;
+}
+
+.focus\:bg-red-95:focus {
+  background-color: #f8b1b1;
+}
+
+.active\:bg-red-95:active {
+  background-color: #f8b1b1;
+}
+
+.placeholder\:bg-red-95::placeholder {
+  background-color: #f8b1b1;
+}
+
+.bg-red-100 {
+  background-color: #fcdbdb;
+}
+
+.hover\:bg-red-100:hover {
+  background-color: #fcdbdb;
+}
+
+.focus\:bg-red-100:focus {
+  background-color: #fcdbdb;
+}
+
+.active\:bg-red-100:active {
+  background-color: #fcdbdb;
+}
+
+.placeholder\:bg-red-100::placeholder {
+  background-color: #fcdbdb;
+}
+
 .bg-primary-10 {
   background-color: #190508;
 }
@@ -3897,6 +4333,226 @@ body.portal {
 
 .placeholder\:border-orange-100::placeholder {
   border-color: #fff3e2;
+}
+
+.border-red-10 {
+  border-color: #140202;
+}
+
+.hover\:border-red-10:hover {
+  border-color: #140202;
+}
+
+.focus\:border-red-10:focus {
+  border-color: #140202;
+}
+
+.active\:border-red-10:active {
+  border-color: #140202;
+}
+
+.placeholder\:border-red-10::placeholder {
+  border-color: #140202;
+}
+
+.border-red-20 {
+  border-color: #3d0505;
+}
+
+.hover\:border-red-20:hover {
+  border-color: #3d0505;
+}
+
+.focus\:border-red-20:focus {
+  border-color: #3d0505;
+}
+
+.active\:border-red-20:active {
+  border-color: #3d0505;
+}
+
+.placeholder\:border-red-20::placeholder {
+  border-color: #3d0505;
+}
+
+.border-red-30 {
+  border-color: #660909;
+}
+
+.hover\:border-red-30:hover {
+  border-color: #660909;
+}
+
+.focus\:border-red-30:focus {
+  border-color: #660909;
+}
+
+.active\:border-red-30:active {
+  border-color: #660909;
+}
+
+.placeholder\:border-red-30::placeholder {
+  border-color: #660909;
+}
+
+.border-red-40 {
+  border-color: #900d0d;
+}
+
+.hover\:border-red-40:hover {
+  border-color: #900d0d;
+}
+
+.focus\:border-red-40:focus {
+  border-color: #900d0d;
+}
+
+.active\:border-red-40:active {
+  border-color: #900d0d;
+}
+
+.placeholder\:border-red-40::placeholder {
+  border-color: #900d0d;
+}
+
+.border-red-50 {
+  border-color: #b91010;
+}
+
+.hover\:border-red-50:hover {
+  border-color: #b91010;
+}
+
+.focus\:border-red-50:focus {
+  border-color: #b91010;
+}
+
+.active\:border-red-50:active {
+  border-color: #b91010;
+}
+
+.placeholder\:border-red-50::placeholder {
+  border-color: #b91010;
+}
+
+.border-red-60 {
+  border-color: #e21414;
+}
+
+.hover\:border-red-60:hover {
+  border-color: #e21414;
+}
+
+.focus\:border-red-60:focus {
+  border-color: #e21414;
+}
+
+.active\:border-red-60:active {
+  border-color: #e21414;
+}
+
+.placeholder\:border-red-60::placeholder {
+  border-color: #e21414;
+}
+
+.border-red-70 {
+  border-color: #ed3636;
+}
+
+.hover\:border-red-70:hover {
+  border-color: #ed3636;
+}
+
+.focus\:border-red-70:focus {
+  border-color: #ed3636;
+}
+
+.active\:border-red-70:active {
+  border-color: #ed3636;
+}
+
+.placeholder\:border-red-70::placeholder {
+  border-color: #ed3636;
+}
+
+.border-red-80 {
+  border-color: #f15f5f;
+}
+
+.hover\:border-red-80:hover {
+  border-color: #f15f5f;
+}
+
+.focus\:border-red-80:focus {
+  border-color: #f15f5f;
+}
+
+.active\:border-red-80:active {
+  border-color: #f15f5f;
+}
+
+.placeholder\:border-red-80::placeholder {
+  border-color: #f15f5f;
+}
+
+.border-red-90 {
+  border-color: #f48888;
+}
+
+.hover\:border-red-90:hover {
+  border-color: #f48888;
+}
+
+.focus\:border-red-90:focus {
+  border-color: #f48888;
+}
+
+.active\:border-red-90:active {
+  border-color: #f48888;
+}
+
+.placeholder\:border-red-90::placeholder {
+  border-color: #f48888;
+}
+
+.border-red-95 {
+  border-color: #f8b1b1;
+}
+
+.hover\:border-red-95:hover {
+  border-color: #f8b1b1;
+}
+
+.focus\:border-red-95:focus {
+  border-color: #f8b1b1;
+}
+
+.active\:border-red-95:active {
+  border-color: #f8b1b1;
+}
+
+.placeholder\:border-red-95::placeholder {
+  border-color: #f8b1b1;
+}
+
+.border-red-100 {
+  border-color: #fcdbdb;
+}
+
+.hover\:border-red-100:hover {
+  border-color: #fcdbdb;
+}
+
+.focus\:border-red-100:focus {
+  border-color: #fcdbdb;
+}
+
+.active\:border-red-100:active {
+  border-color: #fcdbdb;
+}
+
+.placeholder\:border-red-100::placeholder {
+  border-color: #fcdbdb;
 }
 
 .border-primary-10 {
@@ -20103,6 +20759,18 @@ body.portal {
   .lg\:size-12\/12 {
     width: 100%;
     height: 100%;
+  }
+}
+.animate--loader {
+  animation: Loader 1.25s linear infinite forwards;
+}
+
+@keyframes Loader {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(20rem);
   }
 }
 
