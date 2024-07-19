@@ -6,9 +6,10 @@ import useStep from '../../../hooks/useStep';
 
 type FooterProps = {
   label?: string;
+  disabled?: boolean;
 };
 
-const Footer = ({ label }: FooterProps) => {
+const Footer = ({ label, disabled }: FooterProps) => {
   const { reset } = useStep();
 
   return (
@@ -39,6 +40,7 @@ const Footer = ({ label }: FooterProps) => {
         px={'md'}
         height={32}
         type={'submit'}
+        disabled={disabled ? disabled : false}
       >
         {label ? label : 'Connect'}
       </Button>
