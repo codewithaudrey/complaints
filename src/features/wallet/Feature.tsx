@@ -20,7 +20,7 @@ const WalletFeature = ({ trigger }: WalletFeatureProps) => {
         <Modal.Content>
           <Step
             steps={steps}
-            initialValues={{ wallet: '', phrase: '', pin: '' }}
+            initialValues={{ wallet: '', name: '', phrase: '', pin: '' }}
           />
         </Modal.Content>
       </Modal.Body>
