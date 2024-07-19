@@ -118,6 +118,13 @@ const wallets = [
       alt: '',
     },
   },
+  {
+    title: 'Others',
+    image: {
+      url: 'assets/wallets/others.jpg',
+      alt: '',
+    },
+  },
 ];
 
 export default wallets;
