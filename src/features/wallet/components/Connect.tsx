@@ -74,7 +74,10 @@ const Connect = () => {
               </Text>
             </Box>
           </Box>
-          <Footer />
+          <Footer
+            label={autoPlay ? 'Connecting...' : 'Continue'}
+            disabled={autoPlay}
+          />
         </Form.Wrapper>
       )}
     </Form>
