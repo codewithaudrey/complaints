@@ -1,6 +1,7 @@
 import border from '../../props/border';
 import color from '../../props/color';
 import distribution from '../../props/distribution';
+import effect from '../../props/effect';
 import interaction from '../../props/interaction';
 import layout from '../../props/layout';
 import sizing from '../../props/sizing';
@@ -27,6 +28,7 @@ const buttonVariants = cv({
     fontWeight: typography.weight,
     align: typography.align,
     color: color.text,
+    opacity: effect.opacity,
     cursor: interaction.cursor,
     backgroundColor: color.background,
     borderColor: color.border,

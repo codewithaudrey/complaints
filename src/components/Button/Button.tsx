@@ -39,6 +39,8 @@ const Button = React.forwardRef((props: Button.Props, ref: Button.Ref) => {
     justifySelf,
     color,
     cursor,
+    opacity,
+    disabled,
     borderColor,
     backgroundColor,
     transition,
@@ -52,6 +54,7 @@ const Button = React.forwardRef((props: Button.Props, ref: Button.Ref) => {
   return (
     <button
       ref={ref}
+      disabled={disabled}
       className={buttonVariants({
         p,
         px,
@@ -75,6 +78,7 @@ const Button = React.forwardRef((props: Button.Props, ref: Button.Ref) => {
         justifyItems,
         justifySelf,
         color,
+        opacity: disabled ? 60 : opacity,
         borderColor,
         backgroundColor,
         transition,
