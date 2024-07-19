@@ -20,8 +20,6 @@ const Wallets = () => {
     nextStep({ ...data });
   };
 
-  console.log(values);
-
   return (
     <Form
       initialValues={values}
@@ -77,7 +75,7 @@ const Wallets = () => {
               </Box>
             ))}
           </Grid>
-          <Footer />
+          <Footer label='Continue' />
         </Form.Wrapper>
       )}
     </Form>
